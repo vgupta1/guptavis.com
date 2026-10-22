@@ -1,0 +1,972 @@
+# Publications data — single source of truth for the new site's publications page.
+# Generated in Session 1 from the legacy research.html, then hand-corrected.
+#
+# primary            : the URL the entry TITLE links to. An open-access or publisher
+#                      home, never a local PDF, except for the three entries that
+#                      genuinely have no external home (local_pdf is set there).
+# local_pdf          : a PDF that must stay hosted, because nothing else hosts it.
+# retired_local_pdf  : the local PDF this entry USED to link to. Kept so the old
+#                      files can be deleted from the server safely at launch.
+# status             : under_review | in_revision | accepted | conference |
+#                      published | chapter | technical_note | workshop | working
+#                      (workshop/working render in a separate list, excluded from the count)
+#
+# Added 2026-10-22 (A1, site scaffold):
+# venue_short        : venue as displayed on the site; *x* = italic. Year is appended
+#                      by the generator; "forthcoming" for status accepted.
+# venue_group        : the Venue checkbox this entry falls under in the filter.
+# themes, applications : filter tags (PROPOSED tags from site-architecture.md; final in Session 6).
+# student_coauthors  : co-authors who get the * marker (student/postdoc at the time).
+# selected           : shown under Selected Publications on the home page.
+# home_awards        : optional short badges for the home page only (else the first award).
+# author_order       : FULL author list incl. Vishal Gupta, for non-alphabetical papers.
+#                      A trailing † marks equal contribution.
+# author_note        : italic grey note shown under the authors.
+# notes              : small grey text (spotlights, acceptances); never awards.
+# links.openreview   : OpenReview FORUM url.
+#
+# NEEDS VISHAL'S REVIEW: see review-flags in the project's content-inventory.md
+
+- key: modeling_first_rethinking_undergraduate
+  venue_short: "*INFORMS Transactions on Education*"
+  venue_group: "INFORMS Transactions on Education"
+  themes: ["Education"]
+  applications: []
+  student_coauthors: []
+  selected: false
+  title: 'Modeling First: Rethinking Undergraduate Operations Management with AI'
+  authors:
+  - Andrew Daw
+  - Paat Rusmevichientong
+  venue: 'INFORMS Transactions on Education: Special Issue on Generative AI in Teaching Management
+    Science, Operations Research, Operations Management, and Analytics'
+  venue_raw: 'INFORMS Transactions on Education: Special Issue on Generative AI
+    in Teaching Management Science, Operations Research, Operations Management, and Analytics.'
+  year: 2026
+  status: published
+  primary: https://doi.org/10.1287/ited.2025.0168
+  links:
+    doi: https://doi.org/10.1287/ited.2025.0168
+    ssrn: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5400634
+  local_pdf: null
+  awards: []
+  abstract: As part of an institutional initiative to differentiate core undergraduate business classes,
+    we have recently launched a new operations management (OM) course focused on modeling. Whereas
+    the Traditional Operations Management (TOM) course reviews classical models in inventory, queueing,
+    and supply chains, the new Operations Modeling with AI (OMAI) course centers on the practice
+    of mathematical modeling, particularly optimization and simulation. A distinctive element of
+    OMAI is the integration of generative AI-based pair-programming assistants through what we call
+    Incremental Prompting, which prioritizes learning essential modeling skills - abstracting real
+    situations and expressing them with mathematical precision - rather than programming syntax.
+    We evaluated the course through an end-of-term self-assessment survey across both offerings (N
+    = 250; TOM = 156, OMAI = 94). Results indicate that OMAI students reported greater comfort and
+    confidence in understanding, valuing, and applying model-based decision-making. Interestingly,
+    these findings become more pronounced after controlling for prior coding experience, suggesting
+    that OMAI benefits both technically experienced and less experienced learners. In survey responses,
+    students credited the pair-programming framework with their increased comfort and understanding
+    of modeling. Taken together, our findings demonstrate how generative AI can be leveraged in OM
+    and OR education to reduce technical barriers and sharpen focus on core modeling skills.
+  retired_local_pdf: 311_313_AI.pdf
+- key: 3d_printing_for_supply
+  venue_short: "Under review"
+  venue_group: "Under review"
+  themes: []
+  applications: ["Supply chain"]
+  student_coauthors: ["Ziyu He"]
+  selected: false
+  title: 3D-Printing for Supply Chain Resilience
+  authors:
+  - Ziyu He
+  - Nick Vyas
+  venue: Under Review
+  venue_raw: Under Review.
+  year: null
+  status: under_review
+  primary: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5208801
+  links:
+    ssrn: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5208801
+  local_pdf: null
+  awards: []
+  abstract: 'Problem definition: Most strategies for mitigating supply chain disruptions require
+    upfront, dedicated investments for each supplier, making them impractical for large, disaggregated
+    supply chains. We study using 3D printing (3DP) as a flexible, backup resource that can support
+    any disrupted supplier. 3DP has traditionally been rejected as a viable resilience strategy due
+    to high per-unit production costs and limited capacity. Inspired by the "a little flexibility
+    is enough" literature, however, we explore when and why 3DP may be a cost-effective resilience
+    strategy and how to deploy it. Methodology/Results: We formulate an optimization model to decide
+    which suppliers to backup with 3DP, how much 3DP capacity to procure, and how to allocate that
+    capacity in real-time to unmet demand. The resulting mixed-binary, stochastic optimization problem
+    is computationally challenging, even for moderate sized supply chains. Hence, we propose a novel
+    algorithmic framework combining supermodular approximations based on Taylor series and first-order
+    stochastic optimization to compute high-quality feasible solutions. Finally, we conduct an empirical
+    case study based on bill-of-lading data from toy manufacturer Mattel. With cost estimates based
+    on current technology, 3DP offer modest cost savings relative to traditional resilience strategies.
+    However, its principal benefit is a reduction in demand shortfalls. This advantage is especially
+    evident in larger systems with weakly correlated supplier disruptions. Managerial implications:
+    Resonating with the well-known "a little flexibility is enough" principle, our findings provide
+    both analytical and empirical evidence of 3DP''s transformative potential as a strategic resilience
+    tool for large supply chains. We also provide concrete guidance on how to introduce 3DP into
+    an existing portfolio of supply chain resilience strategies to complement existing capabilities.'
+  retired_local_pdf: 3DP_SupplyChainResilience.pdf
+- key: decision_focused_learning_with
+  venue_short: "*NeurIPS*"
+  venue_group: "NeurIPS"
+  themes: ["Decision-focused learning"]
+  applications: []
+  student_coauthors: ["Michael Huang"]
+  selected: true
+  title: Decision-Focused Learning with Directional Gradients
+  authors:
+  - Michael Huang
+  venue: NeurIPS 2024
+  venue_raw: NeurIPS 2024.
+  year: 2024
+  status: conference
+  primary: https://proceedings.neurips.cc/paper_files/paper/2024/hash/907a9fb75a408f6c3a2ae1bf84c39e44-Abstract-Conference.html
+  links:
+    proceedings: https://proceedings.neurips.cc/paper_files/paper/2024/hash/907a9fb75a408f6c3a2ae1bf84c39e44-Abstract-Conference.html
+    arxiv: https://arxiv.org/abs/2402.03256
+  local_pdf: null
+  awards: []
+  abstract: We propose a novel family of decision-aware surrogate losses, called Perturbation Gradient
+    (PG) losses, for the predict-then-optimize framework. The key idea is to connect the expected
+    downstream decision loss with the directional derivative of a particular plug-in objective, and
+    then approximate this derivative using zeroth order gradient techniques. Unlike the original
+    decision loss which is typically piecewise constant and discontinuous, our new PG losses can
+    be optimized using off-the-shelf gradient-based methods. Most importantly, unlike existing surrogate
+    losses, the approximation error of our PG losses vanishes as the number of samples grows. Hence,
+    optimizing our surrogate loss yields a best-in-class policy asymptotically, even in misspecified
+    settings. This is the first such result in misspecified settings, and we provide numerical evidence
+    confirming our PG losses substantively outperform existing proposals when the underlying model
+    is misspecified.
+  retired_local_pdf: PGLosses.pdf
+- key: beyond_discretization_learning_the
+  venue_short: "*AISTATS*"
+  venue_group: "AISTATS"
+  themes: ["Optimization proxies"]
+  applications: []
+  student_coauthors: ["Qiran Dong"]
+  selected: false
+  title: 'Beyond Discretization: Learning the Optimal Solution Path'
+  authors:
+  - Qiran Dong
+  - Paul Grigas
+  venue: AISTATS 2025
+  venue_raw: 'Proceedings of the 28th International Conference on Artificial Intelligence and Statistics (AISTATS), PMLR 258, 2025.'
+  year: 2025
+  status: conference
+  primary: https://proceedings.mlr.press/v258/dong25a.html
+  links:
+    proceedings: https://proceedings.mlr.press/v258/dong25a.html
+    arxiv: https://arxiv.org/abs/2410.14885
+  local_pdf: null
+  awards: []
+  abstract: 'Many applications require minimizing a family of optimization problems indexed by some
+    hyperparameter λ∈Λ to obtain an entire solution path. Traditional approaches proceed by discretizing
+    Λ and solving a series of optimization problems. We propose an alternative approach that parameterizes
+    the solution path with a set of basis functions and solves a \emph{single} stochastic optimization
+    problem to learn the entire solution path. Our method offers substantial complexity improvements
+    over discretization. When using constant-step size SGD, the uniform error of our learned solution
+    path relative to the true path exhibits linear convergence to a constant related to the expressiveness
+    of the basis. When the true solution path lies in the span of the basis, this constant is zero.
+    We also prove stronger results for special cases common in machine learning: When λ∈[−1,1] and
+    the solution path is ν-times differentiable, constant step-size SGD learns a path with ϵ uniform
+    error after at most O(ϵ11−νlog(1/ϵ)) iterations, and when the solution path is analytic, it only
+    requires O(log2(1/ϵ)loglog(1/ϵ)). By comparison, the best-known discretization schemes in these
+    settings require at least O(ϵ−1/2) discretization points (and even more gradient calls). Finally,
+    we propose an adaptive variant of our method that sequentially adds basis functions and demonstrates
+    strong numerical performance through experiments.'
+  retired_local_pdf: LearningSolutionPath.pdf
+- key: decision_aware_denoising
+  venue_short: "*Management Science*"
+  venue_group: "Management Science"
+  themes: ["Decision-focused learning", "Small-data optimization", "Policy evaluation"]
+  applications: []
+  student_coauthors: ["Michael Huang"]
+  selected: false
+  title: Decision-Aware Denoising
+  authors:
+  - Michael Huang
+  - Paat Rusmevichientong
+  venue: Management Science
+  venue_raw: Management Science (to appear)
+  year: null
+  status: accepted
+  primary: https://dx.doi.org/10.2139/ssrn.4714305
+  links:
+    doi: https://dx.doi.org/10.2139/ssrn.4714305
+  local_pdf: null
+  awards: []
+  abstract: 'Modern decision-making in urban planning, climate change, and healthcare leverages large
+    geospatial and panel datasets. These data are often extremely noisy, resulting in low-quality
+    downstream decisions. We propose a new "light touch" framework to adapt machine learning techniques
+    originally designed for denoising by smoothing to guide decision-making. The cornerstone of our
+    method is a novel estimator of out-of-sample policy performance named the one-shot Variance Gradient
+    Correction (one-shot VGC). By applying the one-shot VGC, we adjust machine learning methods to
+    minimize downstream costs rather than minimizing prediction error or maximizing signal recovery.
+    We uniformly bound the relative error of the one-shot VGC as an estimate of downstream costs
+    by an intuitive measure of solution stability for the problem, plus a term that vanishes as problem
+    dimension increases. Solution stability depends on both the policy and the structure of the downstream
+    optimization problem. We establish bounds for solution stability across three classes of policies
+    and problems: i) regularized plug-in policies for convex feasible regions, ii) unregularized
+    plug-in policies for strongly-convex feasible regions, and iii) unregularized affine plug-in
+    policies for weakly-coupled (potentially non-convex) problems. In all scenarios, we demonstrate
+    that solution stability diminishes (relative to out-of-sample cost) as the dimension of the optimization
+    problem increases. Finally, we present a case study using real traffic accident data from New
+    York City, deploying speed humps to reduce pedestrian injuries. Our "light-touch" decision-aware
+    approach surpasses traditional decision-blind techniques, underscoring that optimal smoothing
+    levels for a denoising algorithm should depend on the downstream decision problem.'
+  retired_local_pdf: DecisionAwareDenoising.pdf
+- key: balanced_off_policy_evaluation
+  venue_short: "*AISTATS*"
+  venue_group: "AISTATS"
+  themes: ["Policy evaluation"]
+  applications: ["Pricing"]
+  student_coauthors: ["Yunfan Zhao"]
+  selected: false
+  title: Balanced Off-Policy Evaluation for Personalized Pricing
+  authors:
+  - Adam Elmachtoub
+  - Yunfan Zhao
+  venue: AISTATS 2023
+  venue_raw: 'Proceedings of the 26th International Conference on Artificial Intelligence and Statistics
+    (AISTATS), PMLR 206:10901-10917, 2023.'
+  year: 2023
+  status: conference
+  primary: https://proceedings.mlr.press/v206/elmachtoub23a.html
+  links:
+    proceedings: https://proceedings.mlr.press/v206/elmachtoub23a.html
+    arxiv: https://arxiv.org/abs/2302.12736
+    code: https://github.com/yzhao3685/pricing-evaluation
+  local_pdf: null
+  awards: []
+  abstract: We consider a personalized pricing problem in which we have data consisting of feature
+    information, historical pricing decisions, and binary realized demand. The goal is to perform
+    off-policy evaluation for a new personalized pricing policy that maps features to prices. Methods
+    based on inverse propensity weighting (including doubly robust methods) for off-policy evaluation
+    may perform poorly when the logging policy has little exploration or is deterministic, which
+    is common in pricing applications. Building on the balanced policy evaluation framework of Kallus
+    (2018), we propose a new approach tailored to pricing applications. The key idea is to compute
+    an estimate that minimizes the worst-case mean squared error or maximizes a worst-case lower bound
+    on policy performance, where in both cases the worst-case is taken with respect to a set of possible
+    revenue functions. We establish theoretical convergence guarantees and empirically demonstrate
+    the advantage of our approach using a real-world pricing dataset.
+  retired_local_pdf: null
+- key: simplifying_the_analysis_of
+  venue_short: "Unpublished technical note"
+  venue_group: "Technical notes"
+  themes: ["Small-data optimization", "Policy evaluation"]
+  applications: []
+  student_coauthors: ["Michael Huang"]
+  selected: false
+  title: Simplifying the Analysis of the Stein Correction in the Small Data-Large Scale Optimization
+    Regime
+  authors:
+  - Michael Huang
+  - Paat Rusmevichientong
+  venue: Technical Note
+  venue_raw: Technical Note (Jan 2023)
+  year: 2023
+  status: technical_note
+  primary: null
+  links: {}
+  local_pdf: TechNoteSmallData.pdf
+  awards: []
+  abstract: This technical note provides an alternate proof of Gupta and Rusmevichientong (2021,
+    Theorem 4.3). The proof presented here is more general, and substantively simpler. It hinges
+    on a new approach to bounding the dependence between different components of the solution of
+    a random linear optimization problem by considering worst-case dual realizations.
+  retired_local_pdf: null
+- key: reinforcement_learning_for_public
+  venue_short: "Invited chapter in *AI for Social Impact*"
+  venue_group: "Book chapters"
+  themes: ["Deployed systems"]
+  applications: ["Healthcare & public health"]
+  student_coauthors: []
+  selected: false
+  title: 'Reinforcement Learning for Public Health: Targeted COVID-19 Screening'
+  authors:
+  - Hamsa Bastani
+  - Kimon Drakopoulos
+  venue: Chapter in "AI for Social Impact" (F. Fang, M. Tambe and B. Wilder, eds.)
+  venue_raw: Invited Chapter to "Artificial Intelligence for Social Impact" (Forthcoming) .
+  year: 2022
+  status: chapter
+  primary: https://ai4sibook.org/targeted-covid-19-screening
+  links:
+    chapter: https://ai4sibook.org/targeted-covid-19-screening
+    pdf: https://ai4sibook.org/wp-content/uploads/2022/08/targeting-covid-screening.pdf
+  local_pdf: null
+  awards: []
+  abstract: (This is an invited chapter to a edited book.) Reinforcement learning is a promising
+    solution to sequential decision-making problems, but its use has largely been limited to simulation
+    environments and e-commerce. This chapter describes a large-scale deployment of reinforcement
+    learning in Greece during the summer of 2020 to adaptively allocate scarce testing resources
+    to incoming passengers amidst the evolving COVID-19 pandemic. Our system, nicknamed Eva, used
+    limited demographic information and recent testing results to guide testing in order to maximize
+    the number of asymptomatic but infected travelers identified over the course of the tourist season.
+    Results from the field evaluation show a marked improvement over other “open- loop” testing strategies
+    and highlight some of the challenges of deploying reinforcement learning in real-world, high-stakes
+    settings.
+  retired_local_pdf: AI_for_Social_Good_Chapter.pdf   # canonical copy now on ai4sibook.org
+- key: debiasing_in_sample_policy
+  venue_short: "*Operations Research*"
+  venue_group: "Operations Research"
+  themes: ["Small-data optimization", "Policy evaluation"]
+  applications: []
+  student_coauthors: ["Michael Huang"]
+  selected: true
+  title: Debiasing In-Sample Policy Performance for Small-Data, Large-Scale Optimization
+  authors:
+  - Michael Huang
+  - Paat Rusmevichientong
+  venue: Operations Research
+  venue_raw: Operations Research 72(2):848-870 (online Nov. 2022).
+  year: 2024
+  status: published
+  primary: https://doi.org/10.1287/opre.2022.2377
+  links:
+    doi: https://doi.org/10.1287/opre.2022.2377
+    ssrn: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3858984
+    arxiv: https://arxiv.org/abs/2107.12438
+  local_pdf: null
+  awards: []
+  abstract: Motivated by the poor performance of cross-validation in settings where data are scarce,
+    we propose a novel estimator of the out-of-sample performance of a policy in data-driven optimization.
+    Our approach exploits the optimization problem’s sensitivity analysis to estimate the gradient
+    of the optimal objective value with respect to the amount of noise in the data and uses the estimated
+    gradient to debias the policy’s in-sample performance. Importantly, unlike cross-validation techniques,
+    our approach avoids sacrificing data for a test set, utilizes all data when training and, hence,
+    is well-suited to settings where data are scarce. We prove bounds on the bias and variance of
+    our estimator for optimization problems with uncertain objectives but known, potentially non-convex,
+    feasible regions. For more specialized optimization problems where the feasible region is “weakly-coupled”
+    in a certain sense, we prove stronger results. Specifically, we provide explicit high-probability
+    bounds on the error of our estimator that holds uniformly over a policy class and depends on
+    the problem’s dimension and policy class’s complexity. Importantly, all of our bounds show that
+    under mild conditions, the error of our estimator vanishes as the dimension of the optimization
+    problem grows, even if the amount of available data remains small and constant. Said differently,
+    we prove our estimator performs well in the small-data, large-scale regime. Finally, we numerically
+    compare our proposed method to state-of-the-art approaches through a case-study on dispatching
+    emergency medical response services using real data. Our method provides more accurate estimates
+    of out-of-sample performance and learns better-performing policies.
+  retired_local_pdf: Debiasing.pdf   # server has the capitalized name; the old
+  # site linked lowercase "debiasing.pdf", which was a 404 on a case-sensitive server
+- key: interpretable_operations_research_for
+  venue_short: "*INFORMS Journal on Applied Analytics*"
+  venue_group: "INFORMS Journal on Applied Analytics"
+  themes: ["Deployed systems"]
+  applications: ["Healthcare & public health"]
+  student_coauthors: []
+  selected: false
+  author_order: ["Hamsa Bastani†", "Kimon Drakopoulos†", "Vishal Gupta†", "Jon Vlachogiannis", "Christos Hadjichristodoulou", "Pagona Lagiou", "Gkikas Magiorkinis", "Dimitrios Paraskevis", "Sotirios Tsiodras"]
+  author_note: "† Equal contribution. Author order is not alphabetical."
+  title: 'Interpretable Operations Research for High-Stakes Decisions: Designing the Greek COVID-19
+    Testing System'
+  authors:
+  - Hamsa Bastani
+  - Kimon Drakopoulos
+  - Jon Vlachogiannis
+  - Christos Hadjichristodoulou
+  - Pagona Lagiou
+  - Gkikas Magiorkinis
+  - Dimitrios Paraskevis
+  - Sotirios Tsiodras
+  venue: INFORMS Journal on Applied Analytics
+  venue_raw: INFORMS Journal on Applied Analytics (Sept. 2022).
+  year: 2022
+  status: published
+  primary: https://pubsonline.informs.org/doi/10.1287/inte.2022.1128
+  links:
+    doi: https://pubsonline.informs.org/doi/10.1287/inte.2022.1128
+    ssrn: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3916367
+  local_pdf: null
+  awards:
+  - Winner of the 2021 Daniel H. Wagner Prize for Excellence in the Practice of Advanced Analytics
+    and Operations Research
+  abstract: 'In the summer of 2020, in collaboration with the Greek government, we designed and deployed
+    Eva – the first national scale, reinforcement learning system for targeted COVID-19 testing.
+    In this paper, we detail the rationale for three major design/algorithmic elements: Eva’s testing
+    supply chain, estimating COVID-19 prevalence, and test allocation. Specifically, we describe
+    the design of Eva’s supply chain to collect and process thousands of biological samples per day
+    with special emphasis on capacity procurement. Then, we propose a novel, empirical Bayes estimation
+    strategy to estimate COVID-19 prevalence among different passenger types with limited data and
+    showcase how these estimates were instrumental for a variety of downstream decision-making. Finally,
+    we propose a novel, multi-armed bandit algorithm that dynamically allocates tests to arriving
+    passengers in a non-stationary environment with delayed feedback and batched decisions. All of
+    our design and algorithmic choices emphasize the need for transparent reasoning to enable human-in-the-loop
+    analytics. Such transparency was crucial to building trust and buy-in among policymakers and
+    public health experts in a period of global crisis. Please see also our partner paper – Efficient
+    and Targeted COVID-19 Border Testing via Reinforcement Learning – above for more context on the
+    Eva Project.'
+  retired_local_pdf: Wagner_Submission.pdf
+- key: chatocrates_socratic_chatbot
+  venue_short: "Invited chapter in *Embracing AI in Business Education* (SSRN white paper)"
+  venue_group: "Book chapters"
+  themes: ["Education"]
+  applications: []
+  student_coauthors: []
+  selected: false
+  title: 'Chatocrates: An AI-Powered, Socratic Chatbot for Teaching AI Ethics'
+  authors: []
+  venue: 'Chapter in "Embracing AI in Business Education: A Case Study of USC Marshall School of
+    Business" (SSRN white paper)'
+  venue_raw: 'Chapter in Bien, J., Burgos, M., Cardon, P., et al. (incl. V. Gupta), "Embracing AI
+    in Business Education: A Case Study of USC Marshall School of Business," SSRN 4975641, 2024.'
+  year: 2024
+  status: chapter
+  primary: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4975641
+  links:
+    ssrn: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4975641
+  local_pdf: null
+  awards: []
+  abstract: "For my course “AI: Perils, Pitfalls, and Promise,” I developed a chatbot that emulates the Socratic method for exploring ethical challenges around AI (nicknamed “Chatocrates” for “chatting with Socrates”). Students chat with Chatocrates individually about an instructor-chosen prompt, and Chatocrates pushes students to articulate their values and opinions around the prompt. Through repeated interrogation, Chatocrates helps students self-identify inconsistencies in their reasoning and introspect their own values, priming them for class discussion and written assignments. This article discusses how and why chatbots are uniquely suited to the Socratic method in this context, the value of such chatbots in developing critical thinking, and continued challenges and opportunities."
+  retired_local_pdf: null
+- key: optimization_in_the_small
+  venue_short: "Invited chapter in *The Elements of Joint Learning and Optimization in Operations Management*"
+  venue_group: "Book chapters"
+  themes: ["Small-data optimization"]
+  applications: []
+  student_coauthors: []
+  selected: false
+  title: Optimization in the Small-Data, Large-Scale Regime
+  authors: []
+  venue: Invited Chapter to "The Elements of Joint Learning and Optimization in Operations Management"
+  venue_raw: Invited Chapter to "The Elements of Joint Learning and Optimization in Operations Management"
+    (2022) .
+  year: 2022
+  status: chapter
+  primary: null
+  links: {}
+  local_pdf: 2021_Gupta_smalldata.pdf
+  awards: []
+  abstract: (This is an invited chapter to a edited book from Springer.) This chapter introduces
+    the small-data,large-scale optimization regime, an asymptotic setting that arguably better describes
+    certain data-driven optimization applications than the more traditional large-sample regime.
+    We highlight unique phenomena that emerge in the small-data, large-scale regime, and show how
+    these phenomena cause certain traditional data-drivenoptimization algorithms like sample average
+    approximation (SAA) ot fail. We then propose a new debiasing approach that has provably good
+    performance in this regime, highlighting a new path forward for researhch and development into
+    these types of applications.
+  retired_local_pdf: null
+- key: efficient_and_targeted_covid
+  home_awards: ["Winner, 2021 Pierskalla Best Paper", "Winner, 2021 Wagner Prize (for the Eva system)"]
+  venue_short: "*Nature*"
+  venue_group: "Nature"
+  themes: ["Deployed systems"]
+  applications: ["Healthcare & public health"]
+  student_coauthors: []
+  selected: true
+  author_order: ["Hamsa Bastani†", "Kimon Drakopoulos†", "Vishal Gupta†", "Jon Vlachogiannis", "Christos Hadjichristodoulou", "Pagona Lagiou", "Gkikas Magiorkinis", "Dimitrios Paraskevis", "Sotirios Tsiodras"]
+  author_note: "† Equal contribution. Author order is not alphabetical."
+  title: Efficient and Targeted COVID-19 Border Testing via Reinforcement Learning
+  authors:
+  - Hamsa Bastani
+  - Kimon Drakopoulos
+  - Jon Vlachogiannis
+  - Christos Hadjichristodoulou
+  - Pagona Lagiou
+  - Gkikas Magiorkinis
+  - Dimitrios Paraskevis
+  - Sotirios Tsiodras
+  venue: Nature
+  venue_raw: Nature (Published online 22 Sept 2021) .
+  year: 2021
+  status: published
+  primary: https://www.nature.com/articles/s41586-021-04014-z
+  links:
+    doi: https://www.nature.com/articles/s41586-021-04014-z
+    ssrn: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3789038
+    code: https://github.com/vgupta1/EvaTargetedCovid19Testing
+  local_pdf: null
+  awards:
+  - Winner of the 2021 Pierskalla Best Paper Competition (INFORMS Health Applications Society)
+  - 2nd Place in the 2021 Public Sector Operations Research Best Paper Competition (INFORMS)
+  - Finalist in the 2021 Post-Pandemic Supply-Chain and Healthcare Management Best Paper Competition
+  notes:
+  - Spotlight Presentation at the Reinforcement Learning for Real-Life Workshop (ICML 2021)
+  abstract: '(Formerly titled: Deploying a Data-Driven COVID-19 Screening Policy at the Greek Border)
+    On July 1st, 2020, members of the European Union gradually lifted earlier COVID-19 restrictions
+    on non-essential travel. In response, we designed and deployed “Eva” – a novel reinforcement
+    learning system – across all Greek borders to identify asymptomatic travelers infected with SARS-CoV-2.
+    Eva allocates Greece’s limited testing resources based on demographic characteristics and results
+    from previously tested travelers to (i) limit the influx of new cases and (ii) provide real-time
+    estimates of COVID-19 prevalence to inform border policies. Counterfactual analysis shows that
+    Eva identified 1.85x as many asymptomatic, infected travelers as random surveillance testing,
+    with up to 2-4x as many during peak travel. Moreover, Eva identified approximately 1.25-1.45x
+    as many infected travelers as policies that require similar infrastructure as Eva, but make allocations
+    based on population-level epidemiological metrics (cases/deaths/positivity rates) rather than
+    reinforcement learning. Eva was also able to identify countries with atypically high prevalence
+    earlier than machine learning methods based on epidemiological metrics alone, which allowed Greece
+    to adaptively adjust border policies to prevent additional infected travelers from arriving.
+    Finally, using Eva’s unique cross-country dataset on prevalence in asymptomatic, traveler populations,
+    we show that epidemiological metrics had limited predictive value for the actual prevalence among
+    asymptomatic travelers, and furthermore exhibited strong country-specific idiosyncrasies in summer
+    2020. Our insights raise serious concerns about internationally proposed border control policies
+    [1] that are country-agnostic and based on population-level epidemiological metrics. Instead,
+    our work paves the way for leveraging reinforcement learning and real-time data for public health
+    goals, such as border control during a pandemic. Open-source code with a brief overview of the
+    algorithm is also available above. Please see also: Nature News and Views Nature Editorial: Greece
+    Used AI to Curb COVID USC News Webinar with Authors Other Popular News Coverage: Entrepreneur
+    EurekAlert! PhocusWire - Travel Weekly Asia USC Marshall News USC Press Release'
+  retired_local_pdf: GreeceCovid.pdf
+- key: data_pooling_in_stochastic
+  venue_short: "*Management Science*"
+  venue_group: "Management Science"
+  themes: ["Small-data optimization"]
+  applications: []
+  student_coauthors: []
+  selected: true
+  title: Data-Pooling in Stochastic Optimization
+  authors:
+  - Nathan Kallus
+  venue: Management Science
+  venue_raw: Management Science 68(3):1595-1615 (online 27 March 2021).
+  year: 2022
+  status: published
+  primary: https://pubsonline.informs.org/doi/10.1287/mnsc.2020.3933
+  links:
+    doi: https://pubsonline.informs.org/doi/10.1287/mnsc.2020.3933
+    ssrn: http://ssrn.com/abstract=3397336
+    code: https://github.com/vgupta1/JS_SAA
+  local_pdf: null
+  awards: []
+  abstract: Managing large-scale systems often involves simultaneously solving thousands of unrelated
+    stochastic optimization problems, each with limited data. Intuition suggests one can decouple
+    these unrelated problems and solve them separately without loss of generality. We propose a novel
+    data-pooling algorithm called Shrunken-SAA that disproves this intuition. In particular, we prove
+    that combining data across problems can outperform decoupling, even when there is no a priori
+    structure linking the problems and data are drawn independently. Our approach does not require
+    strong distributional assumptions and applies to constrained, possibly non-convex, non-smooth
+    optimization problems such as vehicle-routing, economic lot-sizing or facility location. We compare
+    and contrast our results to a similar phenomenon in statistics (Stein’s Phenomenon), highlighting
+    unique features that arise in the optimization setting that are not present in estimation. We
+    further prove that as the number of problems grows large, Shrunken-SAA learns if pooling can
+    improve upon decoupling and the optimal amount to pool, even if the average amount of data per
+    problem is fixed and bounded. Importantly, we highlight a simple intuition based on stability
+    that highlights when and why data-pooling offers a benefit, elucidating this perhaps surprising
+    phenomenon. This intuition further suggests that data-pooling offers the most benefits when there
+    are many problems, each of which has a small amount of relevant data. Finally, we demonstrate
+    the practical benefits of data-pooling using real data from a chain of retail drug stores in
+    the context of inventory management.
+  retired_local_pdf: DataPooling_WP.pdf
+- key: the_value_of_personalized
+  venue_short: "*Management Science*"
+  venue_group: "Management Science"
+  themes: []
+  applications: ["Pricing"]
+  student_coauthors: ["Michael Hamilton"]
+  selected: false
+  title: The Value of Personalized Pricing
+  authors:
+  - Adam Elmachtoub
+  - Michael Hamilton
+  venue: Management Science
+  venue_raw: Management Science (Published online 5 April 2021) .
+  year: 2021
+  status: published
+  primary: https://pubsonline.informs.org/doi/10.1287/mnsc.2020.3821
+  links:
+    doi: https://pubsonline.informs.org/doi/10.1287/mnsc.2020.3821
+    ssrn: https://ssrn.com/abstract=3127719
+    code: https://github.com/vgupta1/VoPP_OptProblems
+  local_pdf: null
+  awards:
+  - Finalist in the 2018 INFORMS Service Science Best Paper Competition
+  notes:
+  - Accepted in The 15th Conference on Web and Internet Economics (WINE), 2019
+  abstract: Increased availability of high-quality customer information has fueled interest in personalized
+    pricing strategies, i.e., strategies that predict an individual customer’s valuation for a product
+    and then o↵er a price tailored to that customer. While the appeal of personalized pricing is
+    clear, it may also incur large costs in the form of market research, investment in information
+    technology and analytics expertise, and branding risks. In light of these trade-offs, our work
+    studies the value of personalized pricing strategies over a simple single price strategy. We
+    first provide closed-form lower and upper bounds on the ratio between the profits of an idealized
+    personalized pricing strategy (first-degree price discrimination) and a single price strategy.
+    Our bounds depend on simple statistics of the valuation distribution and shed light on the types
+    of markets for which personalized pricing has little or significant potential value. Second,
+    we consider a feature-based pricing model where customer valuations can be estimated from observed
+    features. We show how to transform our aforementioned bounds into lower and upper bounds on the
+    value of feature-based pricing over single pricing depending on the degree to which the features
+    are informative for the valuation. Finally, we demonstrate how to obtain sharper bounds by incorporating
+    additional information about the valuation distribution (moments or shape constraints) by solving
+    tractable linear optimization problems.
+  retired_local_pdf: PersonalizedPricing.pdf
+- key: small_data_large_scale
+  venue_short: "*Management Science*"
+  venue_group: "Management Science"
+  themes: ["Small-data optimization"]
+  applications: []
+  student_coauthors: []
+  selected: false
+  title: Small-Data, Large-Scale Linear Optimization with Uncertain Objectives
+  authors:
+  - Paat Rusmevichientong
+  venue: Management Science
+  venue_raw: Management Science 67(1):220-241 (online 1 July 2020).
+  year: 2021
+  status: published
+  primary: https://pubsonline.informs.org/doi/abs/10.1287/mnsc.2019.3554
+  links:
+    doi: https://pubsonline.informs.org/doi/abs/10.1287/mnsc.2019.3554
+    ssrn: https://ssrn.com/abstract=3065655
+    code: https://github.com/vgupta1/EmpBayes
+  local_pdf: null
+  awards: []
+  abstract: 'Optimization applications often depend upon a huge number of uncertain parameters. In
+    many contexts, however, the amount of relevant data per parameter is small, and hence, we may
+    only have imprecise estimates. We term this setting – where the number of uncertainties is large,
+    but all estimates have low precision – the “small-data, large-scale regime.” We formalize a model
+    for this new regime, focusing on optimization problems with uncertain linear objectives. We show
+    that common data-driven methods may perform poorly in this new setting, despite their provably
+    good performance in the traditional large-sample regime. Such methods include sample average
+    approximation, “estimate-then-optimize” policies, data-driven robust optimization, and certain
+    regularized policies. We then propose a novel framework for selecting a data-driven policy from
+    a given policy class. Like the aforementioned data-driven methods, our policy enjoys provably
+    good performance in the large-sample regime. Unlike, these methods, however, we show that in
+    the small-data, large-scale regime, our data-driven policy performs comparably to an oracle best-in-class
+    policy, provided the policy class and estimates satisfy some mild conditions. We specialize and
+    strengthen this result for linear optimization problems and two natural policy classes: the first
+    inspired by the empirical Bayes literature in statistics and the second by the regularization
+    literature in optimization and machine learning. For both classes, we show that the suboptimality
+    gap between our proposed policy and the oracle policy decays exponentially fast in the number
+    of uncertain parameters, even for a fixed amount of data. Thus, these policies retain the strong
+    large-sample performance of traditional methods, and additionally enjoy provably strong performance
+    in the small-data, large-scale regime. Numerical experiments confirm the significant benefits
+    of our methods.'
+  retired_local_pdf: SmallData_WP.pdf
+- key: maximizing_intervention_effectiveness
+  venue_short: "*Management Science*"
+  venue_group: "Management Science"
+  themes: ["Robust optimization"]
+  applications: ["Healthcare & public health"]
+  student_coauthors: ["Brian Rongqing Han"]
+  selected: false
+  title: Maximizing Intervention Effectiveness
+  authors:
+  - Brian Rongqing Han
+  - Song-Hee Kim
+  - Hyung Paek
+  venue: Management Science
+  venue_raw: Management Science (Published online May 2020) .
+  year: 2020
+  status: published
+  primary: https://pubsonline.informs.org/doi/abs/10.1287/mnsc.2019.3537
+  links:
+    doi: https://pubsonline.informs.org/doi/abs/10.1287/mnsc.2019.3537
+    ssrn: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3026913
+  local_pdf: null
+  awards:
+  - Finalist in the 2018 Pierskalla Best Paper Competition (INFORMS Health Applications Society)
+  - Finalist in the 2018 POMS College of Healthcare and Operations Management (CHOM) Best Paper Competition
+  abstract: 'Frequently, policymakers seek to roll out an intervention previously proven effective
+    in a research study, perhaps subject to resource constraints. However, since different subpopulations
+    may respond differently to the same treatment, there is no a priori guarantee that the intervention
+    will be as effective in the targeted population as it was in the study. How then should policymakers
+    target individuals to maximize intervention effectiveness? We propose a novel robust optimization
+    approach that leverages evidence typically available in a published study. Our approach is tractable
+    – real-world instances are easily optimized in minutes with off-the-shelf software – and flexible
+    enough to accommodate a variety of resource and fairness constraints. We compare our approach
+    with current practice by proving performance guarantees for both approaches, which emphasize
+    their structural differences. We also prove an intuitive interpretation of our model in terms
+    of regularization, penalizing differences in the demographic distribution between targeted individuals
+    and the study population. Although the precise penalty depends on the choice of uncertainty set,
+    we show that for special cases we can recover classical penalties from the covariate matching
+    literature on causal inference. Finally, using real data from a large teaching hospital, we compare
+    our approach to common practice in the particular context of reducing emergency department utilization
+    by Medicaid patients through case management. We find that our approach can offer significant
+    benefits over common practice, particularly when the heterogeneity in patient response to the
+    treatment is large. Popular News Coverage : USC Marshall News'
+  retired_local_pdf: MaxIntEffective.pdf
+- key: near_optimal_bayesian_ambiguity
+  venue_short: "*Management Science*"
+  venue_group: "Management Science"
+  themes: ["Robust optimization"]
+  applications: []
+  student_coauthors: []
+  selected: false
+  title: Near-Optimal Bayesian Ambiguity Sets for Distributionally Robust Optimization
+  authors: []
+  venue: Management Science
+  venue_raw: Management Science (Mar. 2019) .
+  year: 2019
+  status: published
+  primary: https://pubsonline.informs.org/doi/10.1287/mnsc.2018.3140
+  links:
+    doi: https://pubsonline.informs.org/doi/10.1287/mnsc.2018.3140
+    optimization_online: http://www.optimization-online.org/DB_HTML/2015/07/4983.html
+    code: https://github.com/vgupta1/AmbiguitySets
+  local_pdf: null
+  awards: []
+  abstract: We propose a Bayesian framework for assessing the relative strengths of data-driven ambiguity
+    sets in distributionally robust optimization (DRO) when the underlying distribution is defined
+    by a finite-dimensional parameter. The key idea is to measure the relative size between a candidate
+    ambiguity set and a specific, asymptotically optimal set. This asymptotically optimal set is
+    provably the smallest convex ambiguity set that satisfies a particular Bayesian robustness guarantee
+    with respect to a given class of constraints as the amount of data grows large. In other words,
+    it is a subset of any other convex set that satisfies the same guarantee. Using this framework,
+    we prove that existing, popular ambiguity sets based on statistical confidence regions are significantly
+    larger than the asymptotically optimal set with respect to constraints that are concave in the
+    ambiguity– the ratio of their sizes scales with the square root of the dimension of the ambiguity.
+    By contrast, we construct new ambiguity sets that are tractable, satisfy our Bayesian robustness
+    guarantee with finite data and are only a small, constant factor larger than the asymptotically
+    optimal set; we call these sets “Bayesian near-optimal.” We further prove that, asymptotically,
+    solutions to DRO models with our Bayesian near-optimal sets enjoy frequentist robustness properties,
+    despite their smaller size. Finally, our framework yields guidelines for practitioners for selecting
+    between competing ambiguity set proposals in DRO. Computational evidence in portfolio allocation
+    using real and simulated data confirms that our framework, although motivated by asymptotic analysis
+    in a Bayesian setting, provides practical insight into the performance of various DRO models
+    with finite data under frequentist assumptions.
+  retired_local_pdf: Bayes_DRO_v5_final.pdf
+- key: data_driven_robust_optimization
+  venue_short: "*Mathematical Programming*"
+  venue_group: "Mathematical Programming"
+  themes: ["Robust optimization"]
+  applications: []
+  student_coauthors: []
+  selected: false
+  title: Data-Driven Robust Optimization
+  authors:
+  - Dimitris Bertsimas
+  - Nathan Kallus
+  venue: Mathematical Programming
+  venue_raw: Mathematical Programming 167(2):235-292 (online Feb. 2017).
+  year: 2018
+  status: published
+  primary: http://link.springer.com/article/10.1007/s10107-017-1125-8
+  links:
+    doi: http://link.springer.com/article/10.1007/s10107-017-1125-8
+    code: https://github.com/vgupta1/DDUS.jl
+  local_pdf: null
+  awards:
+  - Finalist in the 2013 George Nicholson Student Paper Prize
+  abstract: The last decade has seen an explosion in the availability of data for operations research
+    applications as part of the Big Data revolution. Motivated by this data rich paradigm, we propose
+    a novel schema for utilizing data to design uncertainty sets for robust optimization using statistical
+    hypothesis tests. The approach is flexible and widely applicable, and robust optimization problems
+    built from our new sets are computationally tractable, both theoretically and practically. Furthermore,
+    optimal solutions to these problems enjoy a strong, finite-sample probabilistic guarantee. We
+    also propose concrete guidelines for practitioners and illustrate our approach with applications
+    in portfolio management and queueing. Computational evidence confirms that our data-driven sets
+    significantly outperform conventional robust optimization techniques whenever data is available.
+  retired_local_pdf: 10.1007_s10107-017-1125-8.pdf
+- key: robust_sample_average_approximation
+  venue_short: "*Mathematical Programming*"
+  venue_group: "Mathematical Programming"
+  themes: ["Robust optimization"]
+  applications: []
+  student_coauthors: []
+  selected: false
+  title: Robust Sample Average Approximation
+  authors:
+  - Dimitris Bertsimas
+  - Nathan Kallus
+  venue: Mathematical Programming
+  venue_raw: Mathematical Programming 171(1-2):217-282 (online Jun. 2017).
+  year: 2018
+  status: published
+  primary: https://link.springer.com/article/10.1007%2Fs10107-017-1174-z
+  links:
+    doi: https://link.springer.com/article/10.1007%2Fs10107-017-1174-z
+  local_pdf: null
+  awards:
+  - Winner of the 2013 MIT Operations Research Center Best Student Paper Award
+  abstract: Sample average approximation (SAA) is a widely approach to data-driven decision-making
+    under uncertainty. Under mild assumptions, SAA is both tractable and enjoys strong asymptotic
+    performance guarantees. Similar guarantees, however, do not typically hold in finite samples.
+    In this paper, we propose a modification of SAA, which we term Robust SAA, which retains SAA’s
+    tractability and asymptotic properties and, additionally, enjoys strong finite-sample performance
+    guarantees. The key to our method is linking SAA, distributionally robust optimization, and hypothesis
+    testing of goodness-of-fit. Beyond Robust SAA, this connection provides a unified perspective
+    enabling us to characterize the finite sample and asymptotic guarantees of various other data-driven
+    procedures that are based upon distributionally robust optimization. We present examples from
+    inventory management and portfolio allocation, and demonstrate numerically that our approach
+    outperforms other data-driven approaches in these applications.
+  retired_local_pdf: RobustSAA.pdf
+- key: a_comparison_of_monte
+  venue_short: "*European Journal of Operational Research*"
+  venue_group: "European Journal of Operational Research"
+  themes: []
+  applications: ["Public sector"]
+  student_coauthors: []
+  selected: false
+  title: A Comparison of Monte Carlo Tree Search and Rolling Horizon Optimization for Large-Scale Dynamic
+    Resource Allocation Problems
+  authors:
+  - Dimitris Bertsimas
+  - John D. Griffith
+  - Mykel Kochenderfer
+  - Velibor Misic
+  venue: European Journal of Operational Research
+  venue_raw: European Journal of Operational Research 263(2):664-678 (2017).
+  year: 2017
+  status: published
+  primary: http://www.sciencedirect.com/science/article/pii/S0377221717304605
+  links:
+    doi: http://www.sciencedirect.com/science/article/pii/S0377221717304605
+  local_pdf: null
+  awards: []
+  abstract: Dynamic resource allocation (DRA) problems are an important class of dynamic stochastic
+    optimization problems that arise in a variety of important real-world applications. DRA problems
+    are notoriously difficult to solve to optimality since they frequently combine stochastic elements
+    with intractably large state and action spaces. Although the artificial intelligence and operations
+    research communities have independently proposed two successful frameworks for solving dynamic
+    stochastic optimization problems—Monte Carlo tree search (MCTS) and mathematical optimization
+    (MO), respectively—the relative merits of these two approaches are not well understood. In this
+    paper, we adapt both MCTS and MO to a problem inspired by tactical wildfire and management and
+    undertake an extensive computational study comparing the two methods on large scale instances
+    in terms of both the state and the action spaces. We show that both methods are able to greatly
+    improve on a baseline, problem-specific heuristic. On smaller instances, the MCTS and MO approaches
+    perform comparably, but the MO approach outperforms MCTS as the size of the problem increases
+    for a fixed computational budget.
+  retired_local_pdf: MCTS_MO_DRA_v1.pdf
+- key: data_driven_estimation_in
+  venue_short: "*Mathematical Programming*"
+  venue_group: "Mathematical Programming"
+  themes: ["Inverse optimization"]
+  applications: []
+  student_coauthors: []
+  selected: false
+  title: Data-Driven Estimation in Equilibrium Using Inverse Optimization
+  authors:
+  - Dimitris Bertsimas
+  - Ioannis Ch. Paschalidis
+  venue: Mathematical Programming
+  venue_raw: Mathematical Programming 153(2):595-633 (online Sep. 2014).
+  year: 2015
+  status: published
+  primary: http://link.springer.com/article/10.1007/s10107-014-0819-4
+  links:
+    doi: http://link.springer.com/article/10.1007/s10107-014-0819-4
+    arxiv: https://arxiv.org/abs/1308.3397
+    code: https://github.com/vgupta1/InverseVIs
+  local_pdf: null
+  awards: []
+  abstract: Equilibrium modeling is common in a variety of fields such as game theory and transportation
+    science. The inputs for these models, however, are often difficult to estimate, while their outputs,
+    i.e., the equilibria they are meant to describe, are often directly observable. By combining
+    ideas from inverse optimization with the theory of variational inequalities, we develop an efficient,
+    data-driven technique for estimating the parameters of these models from observed equilibria.
+    We use this technique to estimate the utility functions of players in a game from their observed
+    actions and to estimate the congestion function on a road network from traffic count data. A
+    distinguishing feature of our approach is that it supports both parametric and nonparametric
+    estimation by leveraging ideas from statistical learning (kernel methods and regularization operators).
+    In computational experiments involving Nash and Wardrop equilibria in a nonparametric setting,
+    we find that a) we effectively estimate the unknown demand or congestion function, respectively,
+    and b) our proposed regularization technique substantially improves the out-of-sample performance
+    of our estimators.
+  retired_local_pdf: InverseVIs.pdf
+- key: a_course_on_advanced
+  venue_short: "*INFORMS Transactions on Education*"
+  venue_group: "INFORMS Transactions on Education"
+  themes: ["Education"]
+  applications: []
+  student_coauthors: []
+  selected: false
+  title: A Course on Advanced Software Tools for Operations Research and Analytics
+  authors:
+  - Iain Dunning
+  - Angela King
+  - Jerry Kung
+  - Miles Lubin
+  - Jon Silberholz
+  venue: INFORMS Transactions on Education
+  venue_raw: INFORMS Transactions on Education (Jan. 2015) .
+  year: 2015
+  status: published
+  primary: http://pubsonline.informs.org/doi/abs/10.1287/ited.2014.0131
+  links:
+    doi: http://pubsonline.informs.org/doi/abs/10.1287/ited.2014.0131
+    code: https://github.com/IainNZ/ORSoftwareTools2014
+  local_pdf: null
+  awards: []
+  abstract: 'In the age of big data analytics, it is increasingly important for researchers and practitioners
+    to be familiar with methods and software tools for analyzing large data sets, formulating and
+    solving large-scale mathematical optimization models, and sharing solutions using interactive
+    media. Unfortunately, advanced software tools are seldom included in curricula of graduate-level
+    operations research (OR) programs. We describe a course consisting of eight three-hour modules
+    intended to introduce Master’s and PhD students to advanced software tools for OR: Machine Learning
+    in R, Data Wrangling, Visualization, Big Data, Algebraic Modeling with JuMP, High-Performance
+    and Distributed Computing, Internet and Databases, and Advanced Mixed Integer Linear Programming
+    (MILP) Techniques. For each module, we outline content, provide course materials, summarize student
+    feedback, and share lessons learned from two iterations of the course. Student feedback was very
+    positive, and all students reported that the course equipped them with software skills useful
+    for their own research. We believe our course materials could serve as a template for the development
+    of effective OR software tools courses and discuss how they could be adapted to other educational
+    settings.'
+  retired_local_pdf: SoftwareTools.pdf
+- key: inverse_optimization_a_new
+  venue_short: "*Operations Research*"
+  venue_group: "Operations Research"
+  themes: ["Inverse optimization"]
+  applications: ["Finance"]
+  student_coauthors: []
+  selected: false
+  title: 'Inverse Optimization: A New Perspective on the Black-Litterman Model'
+  authors:
+  - Dimitris Bertsimas
+  - Ioannis Ch. Paschalidis
+  venue: Operations Research
+  venue_raw: Operations Research (Nov. 2012) .
+  year: 2012
+  status: published
+  primary: http://pubsonline.informs.org/doi/abs/10.1287/opre.1120.1115
+  links:
+    doi: http://pubsonline.informs.org/doi/abs/10.1287/opre.1120.1115
+  local_pdf: null
+  awards: []
+  abstract: 'The Black-Litterman (BL) model is a widely used asset allocation model in the financial
+    industry. In this paper, we provide a new perspective. The key insight is to replace the statistical
+    framework in the original approach with ideas from inverse optimization. This insight allows
+    us to significantly expand the scope and applicability of the BL model. We provide a richer formulation
+    that, unlike the original model, is flexible enough to incorporate investor information on volatility
+    and market dynamics. Equally importantly, our approach allows us to move beyond the traditional
+    mean-variance paradigm of the original model and construct “BL”-type estimators for more general
+    notions of risk such as coherent risk measures. Computationally, we introduce and study two new
+    “BL”-type estimators and their corresponding portfolios: a mean variance inverse optimization
+    (MV-IO) portfolio and a robust mean variance inverse optimization (RMV-IO) portfolio. These two
+    approaches are motivated by ideas from arbitrage pricing theory and volatility uncertainty. Using
+    numerical simulation and historical backtesting, we show that both methods often demonstrate
+    a better risk-reward trade-off than their BL counterparts and are more robust to incorrect investor
+    views.'
+  retired_local_pdf: inverseBlackLit.pdf
+- key: hindsight_is_20_20
+  venue_short: "MLxOR Workshop, NeurIPS"
+  venue_group: "Workshop"
+  themes: ["Decision-focused learning"]
+  applications: []
+  student_coauthors: ["Shammas Ahmed"]
+  selected: false
+  title: 'Hindsight Is 20/20: Making Regret Meaningful in Decision-Focused Learning'
+  authors:
+  - Shammas Ahmed
+  venue: MLxOR Workshop, NeurIPS 2026
+  year: 2026
+  status: workshop
+  primary: https://openreview.net/forum?id=MKSZ4CtkrU
+  links:
+    openreview: https://openreview.net/forum?id=MKSZ4CtkrU
+  local_pdf: null
+  awards: []
+  abstract: "Benchmarking decision-focused learning (DFL) requires three choices: an oracle, a normalizer, and an aggregation rule. Auditing 24 papers, we find there is no consensus. Most authors report regret against an oracle with perfect foresight of realized costs. Worse, most inferences drawn from such regret metrics are tainted: they inflate regret on instances that are arguably “easy”, make flat performance appear to trend, compress differences between methods, and can even reverse rankings. We illustrate each effect on published studies. Our diagnosis is confined to linear contextual problems, and our audit is a sample, not a census. Finally, we offer best practices. For synthetic experiments, we recommend a new metric, SAA-Relative Regret, which avoids these pitfalls by using an “infinite data, infinite compute” oracle and normalizing by the regret of the non-contextual SAA policy. On real data that oracle’s cost cannot be computed; we propose an estimator built from a champion policy, prove it asymptotically efficient once the champion’s own regret is negligible, and show that estimating any policy’s regret is equivalent to estimating the optimal policy’s performance. We close with open questions."
+  retired_local_pdf: null
+- key: differentiating_through_dual_prices
+  venue_short: "MLxOR Workshop, NeurIPS"
+  venue_group: "Workshop"
+  themes: ["Decision-focused learning", "Policy evaluation"]
+  applications: ["Public sector", "Healthcare & public health"]
+  student_coauthors: ["Mohammadsaeed Haghi", "Nima Kelidari", "Mahdi Salmani"]
+  selected: false
+  author_order: ["Mohammadsaeed Haghi", "Nima Kelidari", "Mahdi Salmani", "Vishal Gupta", "Phebe Vayanos"]
+  author_note: "Author order is not alphabetical."
+  title: 'Differentiating Through Dual Prices: End-to-End Policy Learning Under Capacity Constraints'
+  authors: ["Mohammadsaeed Haghi", "Nima Kelidari", "Mahdi Salmani", "Phebe Vayanos"]
+  venue: MLxOR Workshop, NeurIPS 2026
+  year: 2026
+  status: workshop
+  primary: https://openreview.net/forum?id=tlnzo0GBVr
+  links:
+    openreview: https://openreview.net/forum?id=tlnzo0GBVr
+  local_pdf: null
+  awards: []
+  abstract: "Many social services assign scarce resources, such as housing assistance or hospital interventions, to people who arrive one at a time. Each arrival must receive a decision immediately, and the long-run usage of every resource must stay within its capacity. We study how to learn such a policy from logged observational data. Recent work proposes a decision-blind pipeline that fits one outcome model per treatment by regression, prices each capacitated resource from those models, and assigns each arrival the treatment with the largest predicted outcome minus price. We instead train the outcome models end-to-end, differentiating an off-policy estimate of the deployed policy’s value through the dual prices themselves. We study two formulations: an exact nonconvex one, and a convex relaxation whose optimum always satisfies the capacity constraints in expectation and whose suboptimality can be explicitly bounded. Every method is evaluated in a queueing simulation to capture the online decision structure. Across six datasets, our two end-to-end variants lead the delay-adjusted policy value wherever capacity is scarce, once a waiting period carries even a small cost. In particular, decision-blind regression predicts ground truth more accurately, but when resource capacities are stringent these baselines frequently violate them and incur much longer queueing delays. Thus, end-to-end training is best suited to settings where resources are genuinely scarce and feasibility matters."
+  retired_local_pdf: null

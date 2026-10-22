@@ -1,0 +1,10 @@
+{% macro paper(p, full=True) -%}
+<li{% if full %} data-f="{{ p.filter_json }}"{% endif %}>{% if p.href %}<a class="pt" href="{{ p.href }}">{{ p.title }}</a>{% else %}<span class="pt">{{ p.title }}</span>{% endif %}
+<p class="by">{{ p.byline }}</p>
+{%- if p.author_note %}<p class="anote">{{ p.author_note_html }}</p>{% endif %}
+{%- for n in p.notes or [] %}<p class="pnote">{{ n }}</p>{% endfor %}
+{%- set badges = p.awards if full else (p.home_awards or p.awards[:1]) %}
+{%- if badges %}<div class="awards">{% for a in badges %}<span class="award">{{ icon.medal }}{{ a }}</span>{% endfor %}</div>{% endif %}
+{%- if full %}<div class="lk">{% if p.abstract %}<details class="ab"><summary>Abstract</summary><p>{{ p.abstract }}</p></details>{% endif %}{% for label, href in p.link_list %}<a href="{{ href }}">{{ label }}</a>{% endfor %}</div>{% endif %}
+</li>
+{%- endmacro %}

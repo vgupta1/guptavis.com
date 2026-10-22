@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+{% from "_paper.html" import paper with context %}
+{% block main %}
+<h1 class="ptitle">Publications</h1>
+<p class="thanks">I’m grateful to the National Science Foundation, which has generously supported much of this work through the <a href="https://www.ai4opt.org/">AI4OPT AI Institute</a>, the <a href="https://sites.google.com/usc.edu/usc-nrt-orai/home">NRT-AI traineeship</a> and CMMI-1661732, and to USC for its support.</p>
+<p class="scholar"><a href="{{ site.scholar }}">{{ icon.scholar }} Google Scholar profile, with citations →</a></p>
+
+<details class="filter" id="flt">
+  <summary>Filter <span class="active" id="factive" hidden></span></summary>
+  <div class="facets">
+    <div class="facet"><span class="lbl">Topic</span>{% for t in topics %}<button class="chip" type="button" data-facet="t" data-val="{{ t }}" aria-pressed="false">{{ t }}</button>{% endfor %}</div>
+    <div class="facet"><span class="lbl">Application</span>{% for a in apps %}<button class="chip" type="button" data-facet="a" data-val="{{ a }}" aria-pressed="false">{{ a }}</button>{% endfor %}</div>
+    <div class="facet vfacet"><span class="lbl">Venue</span><div class="vgrid">{% for v in venues %}<label class="vbox"><input type="checkbox" data-facet="v" value="{{ v }}"> {{ v }}</label>{% endfor %}</div></div>
+    <div class="fstatus"><span id="fcount" aria-live="polite">Showing all {{ pubs|length }} publications.</span><button type="button" class="clear" id="fclear">Clear all</button></div>
+  </div>
+</details>
+
+<div class="legend"><p>Authors are listed alphabetically unless otherwise stated.</p><p>* Student or postdoc co-author at the time of the research.</p></div>
+
+<ul class="papers" id="plist">
+{% for p in pubs %}{{ paper(p) }}
+{% endfor %}
+</ul>
+<p class="empty" id="fempty" hidden>No publications match these filters. <button type="button" class="clear" id="fclear2">Clear all</button></p>
+
+{% if others %}
+<!-- v1 layout for working & workshop papers; final layout is a post-launch Session 6 item. -->
+<section class="second">
+  <h2>Working &amp; Workshop Papers</h2>
+  <ul class="papers">
+  {% for p in others %}{{ paper(p) }}
+  {% endfor %}
+  </ul>
+</section>
+{% endif %}
+{% endblock %}
+{% block scripts %}
+<script>
+(function(){
+  var list=[].slice.call(document.querySelectorAll('#plist > li'));
+  var total=list.length, sel={t:new Set(),a:new Set(),v:new Set()};
+  function update(){
+    var n=0;
+    list.forEach(function(li){
+      var d=JSON.parse(li.getAttribute('data-f'));
+      var ok=(sel.t.size===0||d.t.some(function(x){return sel.t.has(x)}))
+           &&(sel.a.size===0||d.a.some(function(x){return sel.a.has(x)}))
+           &&(sel.v.size===0||sel.v.has(d.v));
+      li.hidden=!ok; if(ok) n++;
+    });
+    var k=sel.t.size+sel.a.size+sel.v.size;
+    document.getElementById('fcount').textContent = k ? ('Showing '+n+' of '+total+' publications.') : ('Showing all '+total+' publications.');
+    var fa=document.getElementById('factive'); fa.hidden=!k; fa.textContent=k?('· '+k+' selected'):'';
+    document.getElementById('fempty').hidden = n!==0;
+  }
+  var chips=[].slice.call(document.querySelectorAll('.chip')), boxes=[].slice.call(document.querySelectorAll('.vbox input'));
+  function sync(){
+    chips.forEach(function(b){ b.setAttribute('aria-pressed', sel[b.dataset.facet].has(b.dataset.val)); });
+    boxes.forEach(function(c){ c.checked=sel.v.has(c.value); });
+    update();
+  }
+  chips.forEach(function(b){ b.addEventListener('click',function(){
+    var s=sel[b.dataset.facet], v=b.dataset.val; if(s.has(v)) s.delete(v); else s.add(v); sync(); }); });
+  boxes.forEach(function(c){ c.addEventListener('change',function(){
+    if(c.checked) sel.v.add(c.value); else sel.v.delete(c.value); sync(); }); });
+  function clear(){ ['t','a','v'].forEach(function(f){sel[f].clear()}); sync(); }
+  document.getElementById('fclear').addEventListener('click',clear);
+  document.getElementById('fclear2').addEventListener('click',clear);
+  // Presets from the URL, e.g. /publications/?t=Decision-focused+learning (used by the home page's research streams).
+  var q=new URLSearchParams(location.search), any=false;
+  ['t','a','v'].forEach(function(f){ q.getAll(f).forEach(function(v){ sel[f].add(v); any=true; }); });
+  if(any){ document.getElementById('flt').open=true; sync(); }
+})();
+</script>
+{% endblock %}

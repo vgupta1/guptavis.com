@@ -1,0 +1,19 @@
+# Site-wide settings. The recruiting line is a one-line yearly update.
+name: Vishal Gupta
+url: https://guptavis.com
+email: guptavis@usc.edu
+job_title: Dean's Associate Professor of Data Sciences and Operations
+org: USC Marshall School of Business
+scholar: https://scholar.google.com/citations?user=KZcnoikAAAAJ
+orcid: https://orcid.org/0000-0003-4371-9114
+github: https://github.com/vgupta1
+recruiting:
+  active: true
+  term: Fall 2027
+  text: "I'm recruiting 2–3 PhD students for Fall 2027."
+# v1 nav. Teaching and Industry Collaborations join when built (no placeholder pages).
+nav:
+  - [Publications, /publications/]
+  - [Students, /phd/]
+  - [About, /about/]
+  - [CV, /cv.pdf]

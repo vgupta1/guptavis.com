@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block main %}
+<!-- SHELL (A1). Real copy is sprint step A2: who I'm looking for, AI in research, programs side by side
+     (with program links), ORAI/fellowships, the expectations doc at /phd/expectations/, "if you do email". -->
+<div class="prose">
+<h1 class="ptitle">Students</h1>
+{% if site.recruiting.active %}<div class="callout"><p class="callout-h">I’m admitting 2–3 PhD students for {{ site.recruiting.term }}.</p><p>Applications are due <b>December 15, 2026</b>. Apply to either program below and name me in your materials. There’s no need to email me first.</p></div>{% endif %}
+<p>I’m looking for students who want to work at the intersection of operations research and AI, particularly on how to leverage AI tools in data-driven decision-making.</p>
+
+<h2>I Advise Students in Two Separate PhD Programs</h2>
+<p>Both programs guarantee five years of funding with satisfactory progress. Apply to either or both.</p>
+</div>
+<div class="programs prog-cards">
+  <div><p class="lbl">USC Marshall School of Business</p><h3>Data Sciences and Operations</h3>
+    <a class="go" href="https://www.marshall.usc.edu/programs/graduate-programs/phd-program/data-sciences-operations">Program page →</a></div>
+  <div><p class="lbl">USC Viterbi School of Engineering</p><h3>Industrial &amp; Systems Engineering</h3>
+    <a class="go" href="https://ise.usc.edu/academics/ph-d-program/">Program page →</a></div>
+</div>
+<div class="prose">
+<p class="orai">Regardless of which program you apply to, I strongly encourage my students to complete the <a href="https://sites.google.com/usc.edu/usc-nrt-orai/home">ORAI PhD Certificate</a>.</p>
+</div>
+
+<div class="prose">
+<h2>Students and Postdocs</h2>
+</div>
+<div class="people">
+  <div><p class="lbl">Advised</p><ul>
+    <li><a href="https://www.marshall.usc.edu/people/kaiwen-li">Kaiwen Li</a> <span>current</span></li>
+    <li><a href="https://mh3166.github.io/">Michael Huang</a> <span>→ Baruch College (CUNY), tenure-track</span></li></ul></div>
+  <div><p class="lbl">Postdoc</p><ul>
+    <li><a href="https://sites.google.com/usc.edu/ziyuhe">Ziyu He</a> <span>→ Texas State University, tenure-track</span></li></ul></div>
+  <div><p class="lbl">PhD students I’ve worked with closely</p><ul>
+    <li>Qiran Dong <span>UC Berkeley, current</span></li>
+    <li><a href="https://sites.google.com/view/brianrongqinghan">Brian Han</a> <span>→ University of Illinois Urbana-Champaign, Gies College of Business, tenure-track</span></li>
+    <li><a href="https://mhamilton-pitt.github.io/">Michael Hamilton</a> <span>→ University of Pittsburgh, Katz Graduate School of Business, tenure-track</span></li>
+    <li><a href="https://www.linkedin.com/in/yunfan-zhao-030878a8/">Yunfan Zhao</a> <span>→ Harvard University, Computer Science, postdoc</span></li></ul></div>
+</div>
+
+<div class="prose">
+<h2>Undergraduates</h2>
+<p>USC undergraduates interested in research should look at <a href="https://sites.usc.edu/dsosummerscholars/">DSO Summer Scholars</a>.</p>
+</div>
+{% endblock %}

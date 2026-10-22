@@ -1,0 +1,4 @@
+_site/
+_to_delete/
+.DS_Store
+__pycache__/
