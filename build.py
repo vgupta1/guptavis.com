@@ -128,6 +128,8 @@ def main():
               + sorted({p["venue_group"] for p in pubs} - set(VENUE_ORDER)))),
         ("phd.html", "/phd/", "Students · Vishal Gupta",
          f"Prospective PhD students: Vishal Gupta is admitting students for {site['recruiting']['term']} at USC.", {}),
+        ("expectations.html", "/phd/expectations/", "Advising Expectations · Vishal Gupta",
+         "What PhD students can expect from working with Vishal Gupta, and what he expects of them.", {}),
         ("about.html", "/about/", "About · Vishal Gupta", "About Vishal Gupta, with a bio and photo for organizers.", {}),
     ]
     # Overwrite in place (no rmtree): CI always starts clean, and locally this avoids deleting files.
