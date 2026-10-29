@@ -160,7 +160,7 @@ footer{margin-top:56px; padding-top:18px; border-top:1px solid var(--rule); disp
 .prose ul{padding-left:1.2em}
 .prose li{margin:4px 0}
 .prose .muted{color:var(--muted)}
-.bio-photo{float:right; width:180px; border-radius:6px; margin:4px 0 16px 24px}
+.bio-photo{float:right; width:180px; height:auto; border-radius:6px; margin:4px 0 16px 24px}
 @media (max-width:720px){ .bio-photo{float:none; width:140px; margin:0 0 16px} }
 
 /* PhD page */
